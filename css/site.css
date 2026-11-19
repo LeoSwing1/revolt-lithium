@@ -31,7 +31,69 @@ button{font:inherit;color:inherit}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--lime);color:var(--midnight);padding:.6rem 1rem;border-radius:8px;font-weight:700}
 .skip:focus{left:12px}
+
+/* Loading screen */
+#loader{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--midnight);color:var(--on-dark);font-family:var(--text);transition:opacity .4s var(--ease),visibility .4s}
+#loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-svg{width:64px;height:64px;animation:loader-spin 1.2s linear infinite}
+.loader-track{opacity:.2}
+.loader-fill{transform-origin:center;transform:rotate(-90deg);animation:loader-dash 1.4s ease-in-out infinite}
+@keyframes loader-spin{to{transform:rotate(360deg)}}
+@keyframes loader-dash{
+  0%{stroke-dashoffset:251.2;stroke-dasharray:1,251.2}
+  50%{stroke-dashoffset:0;stroke-dasharray:125.6,251.2}
+  100%{stroke-dashoffset:-251.2;stroke-dasharray:1,251.2}
+}
+.loader-text{margin-top:16px;font-size:1rem;color:var(--on-dark-mute);font-weight:500}
+
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Performance optimizations */
+.fonts-loaded .hero h1,
+.fonts-loaded .hero .lede,
+.fonts-loaded .hero-ctas,
+.fonts-loaded .hero-brands,
+.fonts-loaded .stage,
+.fonts-loaded .rail{opacity:1}
+
+/* Prevent content jump during font loading */
+h1,h2,h3,h4,.btn,.nav-a,.logo img{font-display:swap}
+
+/* Smooth animations - use transform/opacity only for 60fps */
+.stage-item{will-change:transform,opacity}
+.stage-dots button::after{will-change:transform}
+.f-media img{will-change:transform,opacity}
+.pick{will-change:transform,box-shadow}
+.card{will-change:transform,box-shadow}
+.brand .bg img{will-change:transform}
+.step .ph img{will-change:transform}
+
+/* Reduce paint area for animations */
+.stage-ring{will-change:transform}
+
+/* Optimize scrolling */
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 12px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Content visibility for offscreen sections */
+[data-reveal]{content-visibility:auto;contain-intrinsic-size:0 500px}
+
+/* Prevent layout shift on images */
+img{height:auto;max-width:100%}
+
+/* Optimize 3D canvas */
+#stage3d{touch-action:none}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion:reduce){
+  .stage-ring{animation:none}
+  .stage-item img{animation:none}
+  .stage-dots button[aria-current="true"]::after{animation:none}
+  .diagram .pulse{animation:none}
+  .flow{animation:none}
+  .loader-svg{animation:none}
+  .loader-fill{animation:none}
+}
 
 /* ---------- type ---------- */
 h1,h2,h3,h4{font-family:var(--display);font-stretch:112%;font-weight:620;letter-spacing:-.02em;line-height:1.05;margin:0;color:var(--midnight);text-wrap:balance}
