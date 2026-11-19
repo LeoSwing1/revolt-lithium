@@ -23,7 +23,7 @@ export function header(c: Ctx): string {
   const mega = g.map(x => `<div><p class="h4">${x.name}</p>${x.ids.map(id => `<a href="${r}batteries/${c.slug(id)}/"><b style="font-weight:600">${M[id].brand} ${M[id].code}</b><span>${M[id].v}V ${M[id].ah}Ah</span></a>`).join('')}<a href="${r}${x.path}" class="link" style="text-decoration:none">All ${x.name.toLowerCase()} batteries</a></div>`).join('');
   return `<header class="hdr" id="hdr">
   <div class="container">
-    <a class="logo" href="${c.home ? '#top' : r}" aria-label="REVOLT Lithium Energy Solutions, home"><img class="l-dark" src="${r}img/brand/revolt-logo-dark.webp" alt="" width="888" height="304"><img class="l-light" src="${r}img/brand/revolt-logo-light.webp" alt="" width="888" height="304"></a>
+    <a class="logo" href="${c.home ? '#top' : r}" aria-label="REVOLT Lithium Energy Solutions, home"><span class="logo-text">REVOLT</span></a>
     <nav aria-label="Main"><ul class="nav">
       <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-brands">Our Brands ${ic.chev}</button>
         <div class="dd" id="dd-brands">
@@ -47,7 +47,7 @@ export function header(c: Ctx): string {
   </div>
 </header>
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
-  <div class="drawer-top"><img src="${r}img/brand/revolt-logo-light.webp" alt="REVOLT Lithium Energy Solutions" width="888" height="304"><button class="drawer-x" type="button" aria-label="Close menu">×</button></div>
+  <div class="drawer-top"><span class="logo-text">REVOLT</span><button class="drawer-x" type="button" aria-label="Close menu">×</button></div>
   <nav aria-label="Mobile">
     <details><summary>Batteries</summary><div class="sub">${g.map(x => `<a href="${r}${x.path}">${x.name}<span>${x.ids.length} models</span></a>`).join('')}<a href="${a(c, '#batteries')}">Product showcase<span>3D view</span></a></div></details>
     <details><summary>Our Brands</summary><div class="sub"><a href="${r}livgreen/">Livgreen<span>Advanced technology</span></a><a href="${r}redtuff/">Redtuff<span>Always on</span></a><a href="${a(c, '#brands')}">Revolt RLES<span>Bluetooth BMS</span></a></div></details>
