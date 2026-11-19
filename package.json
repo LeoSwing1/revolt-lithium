@@ -1,0 +1,22 @@
+{
+  "name": "revolt-lithium-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "three": "^0.170.0"
+  },
+  "scripts": {
+    "build": "esbuild src/app.ts src/page.ts --bundle --splitting --format=esm --outdir=js --minify --target=es2020 --chunk-names=chunks/[name]-[hash] --legal-comments=none && node scripts/build-pages.ts",
+    "typecheck": "tsc -p .",
+    "dev": "npm run build -- --watch"
+  }
+}

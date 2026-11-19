@@ -1,0 +1,56 @@
+[
+ {
+  "slug": "lithium-vs-lead-acid-e-rickshaw-battery-cost",
+  "title": "Lithium vs Lead-Acid E-Rickshaw Battery: 3-Year Cost in Rupees | Revolt Lithium",
+  "desc": "Real 3-year cost of a lithium (LiFePO4) vs lead-acid e-rickshaw battery: replacements, electricity, upkeep and weight, worked out in rupees.",
+  "h1": "Lithium vs lead-acid e-rickshaw battery: the 3-year cost",
+  "summary": "Batteries, electricity and upkeep added up in rupees for a driver running 90 km a day.",
+  "html": "<p>A lithium pack costs more on the first day. The question every driver asks is whether it pays back. Here is the full 3-year sum for a typical e-rickshaw in western Uttar Pradesh, using the same numbers as our <a href=\"{rel}#calculators\">savings calculator</a>.</p>\n<h2>The assumptions</h2>\n<ul><li>90 km a day, 26 working days a month</li><li>Electricity at ₹7.5 per unit</li><li>A 4 × 12V lead-acid set at ₹30,000 that lasts about 12 months in daily use</li><li>A 51.2V 105Ah LiFePO4 pack at an example price of ₹62,000 (ask us for today's price)</li><li>About 50 Wh per km. Lithium charges at about 95% efficiency, lead-acid at about 75%, and the 120 kg lead-acid set adds roughly 8% to energy use.</li></ul>\n<h2>The 3-year total</h2>\n<table><thead><tr><th>Cost over 36 months</th><th>Lead-acid</th><th>Lithium</th></tr></thead><tbody>\n<tr><td>Batteries</td><td>₹90,000 (3 sets)</td><td>₹62,000 (1 pack)</td></tr>\n<tr><td>Charging electricity</td><td>₹45,490</td><td>₹33,253</td></tr>\n<tr><td>Water top-up and upkeep</td><td>₹7,200</td><td>₹0</td></tr>\n<tr><td><b>Total</b></td><td><b>₹1,42,690</b></td><td><b>₹95,253</b></td></tr></tbody></table>\n<p>At these numbers lithium saves about <b>₹47,000 in three years</b>, roughly ₹1,300 a month. The pack is also under warranty for the full 36 months, while a lead-acid set is usually covered for 6 to 12 months.</p>\n<h2>What the table does not show</h2>\n<p>The lithium pack weighs 44 kg against about 120 kg for lead-acid. Less weight means easier climbs, less wear on tyres and suspension, and more room for passengers. It charges in 4 to 5 hours instead of 8 to 10, so a driver can top up at lunch. There is no acid to spill and no lead to scrap.</p>\n<div class=\"box\"><b>Your numbers will differ.</b> Enter your own daily kilometres, electricity rate and the quotation you received in the <a href=\"{rel}#calculators\">calculator</a>. If you run fewer than 40 km a day, the saving is smaller; above 100 km it grows quickly.</div>\n<h2>Which pack to choose</h2>\n<p>Both the <a href=\"{rel}batteries/redtuff-rt-5376kwh-e-rickshaw-battery/\">Redtuff RT-5.376KWH</a> and the <a href=\"{rel}batteries/livgreen-51-2v-105ah-e-rickshaw-battery/\">Livgreen 51.2V 105Ah</a> use the same 16S1P prismatic LFP cells, BMS and warranty. Choose the brand your area knows.</p>",
+  "faq": [
+   [
+    "Is a lithium e-rickshaw battery worth it?",
+    "For daily use above about 50 km, yes. At 90 km a day the 3-year saving is around ₹47,000 compared with lead-acid, before counting the lower weight and faster charging."
+   ],
+   [
+    "Do I need a new charger for lithium?",
+    "Yes, use a lithium-compatible charger set for the 51.2V LFP pack. Our team checks your charger and controller before fitting."
+   ]
+  ]
+ },
+ {
+  "slug": "e-scooter-battery-48v-60v-72v-guide",
+  "title": "Which E-Scooter Battery Voltage Do I Need? 48V vs 60V vs 72V | Revolt Lithium",
+  "desc": "How to pick the right lithium battery for your electric scooter: find your system voltage, choose capacity for range, and check connector and charger.",
+  "h1": "Which battery does my electric scooter need? 48V, 60V or 72V",
+  "summary": "Find your scooter's voltage, pick capacity for range, and avoid the one mistake that damages controllers.",
+  "html": "<p>Electric scooters in India run on 48V, 60V or 72V systems. The battery must match that voltage exactly. Capacity (Ah) is then your choice, and it decides the range.</p>\n<h2>Step 1: find your scooter's voltage</h2>\n<p>Look at the label on the controller or the old battery, or check the output written on your charger. A 60V scooter will say 60V on at least one of them. If you can't find it, send a photo of the controller label on WhatsApp to 97560 73477 and we will tell you.</p>\n<div class=\"box\"><b>Never fit a higher voltage than the controller is rated for.</b> A 72V pack on a 60V controller can burn the controller and motor. A lower voltage will work but the scooter will be slow.</div>\n<h2>Step 2: choose capacity for range</h2>\n<table><thead><tr><th>Battery</th><th>Energy</th><th>Approx. range</th></tr></thead><tbody>\n<tr><td><a href=\"{rel}batteries/livgreen-lg-4830-48v-30ah-e-scooter-battery/\">Livgreen LG-4830, 48V 30Ah</a></td><td>1.44 kWh</td><td>≈45 km</td></tr>\n<tr><td><a href=\"{rel}batteries/livgreen-lg-6030-60v-30ah-e-scooter-battery/\">Livgreen LG-6030</a> / <a href=\"{rel}batteries/redtuff-rt-6030-60v-30ah-e-scooter-battery/\">Redtuff RT-6030</a>, 60V 30Ah</td><td>1.8 kWh</td><td>≈60 km</td></tr>\n<tr><td><a href=\"{rel}batteries/livgreen-lg-6032-60v-32ah-e-scooter-battery/\">Livgreen LG 6032, 60V 32Ah</a></td><td>1.92 kWh</td><td>≈60 km</td></tr>\n<tr><td><a href=\"{rel}batteries/livgreen-lg-7230-72v-30ah-e-scooter-battery/\">Livgreen LG-7230, 72V 30Ah</a></td><td>2.16 kWh</td><td>≈70 km</td></tr></tbody></table>\n<p>Range assumes about 28 Wh per km on a level road with one rider. A pillion, hills or low tyre pressure can cut it by a fifth or more.</p>\n<h2>Step 3: check connector and charger</h2>\n<p>Our scooter packs come with an Anderson-type connector, the grey plug most Indian e-scooters use. Use a charger made for LiFePO4 at your pack's voltage; an old lead-acid charger can overcharge lithium cells. Revolt RLES packs add a Bluetooth BMS so you can see every cell's voltage on your phone.</p>",
+  "faq": [
+   [
+    "Can I put a 72V battery in a 60V scooter?",
+    "No. Only fit the voltage your controller is rated for. A higher voltage can damage the controller and motor."
+   ],
+   [
+    "How long does an e-scooter lithium battery last?",
+    "LiFePO4 cells are built for years of daily charging, and our scooter packs carry a 36-month warranty."
+   ]
+  ]
+ },
+ {
+  "slug": "lithium-inverter-battery-backup-hours",
+  "title": "Lithium Inverter Battery Backup: How Many Hours Will I Get? | Revolt Lithium",
+  "desc": "Work out backup hours for a lithium (LiFePO4) inverter battery: simple formula, a backup table for 1.344, 2.688 and 5.040 kWh, and which voltage fits your inverter.",
+  "h1": "Lithium inverter battery backup: how many hours will I get?",
+  "summary": "A simple formula, a backup table for every model and which voltage fits your inverter.",
+  "html": "<p>Backup depends on two things: how much energy the battery stores, and how many watts you run during a power cut. Here is how to work it out in a minute.</p>\n<h2>The formula</h2>\n<p><b>Backup hours = battery kWh × 1000 × 0.9 × 0.92 ÷ load in watts.</b> The 0.9 keeps 10% in reserve to protect the cells, and 0.92 is a typical inverter's efficiency. Our <a href=\"{rel}#calculators\">backup calculator</a> does this for you.</p>\n<h2>Backup table</h2>\n<table><thead><tr><th>Battery</th><th>300 W</th><th>500 W</th><th>1000 W</th></tr></thead><tbody>\n<tr><td><a href=\"{rel}batteries/redtuff-rt-1344kwh-inverter-battery/\">1.344 kWh (12.8V)</a></td><td>3.7 hr</td><td>2.2 hr</td><td>1.1 hr</td></tr>\n<tr><td><a href=\"{rel}batteries/redtuff-rt-2688kwh-inverter-battery/\">2.688 kWh (25.6V)</a></td><td>7.4 hr</td><td>4.5 hr</td><td>2.2 hr</td></tr>\n<tr><td><a href=\"{rel}batteries/redtuff-rt-5040kwh-inverter-battery/\">5.040 kWh (48V)</a></td><td>13.9 hr</td><td>8.3 hr</td><td>4.2 hr</td></tr></tbody></table>\n<h2>What is 500 W in a home?</h2>\n<p>A ceiling fan uses about 75 W, an LED tube about 18 W, a TV 60 to 100 W, and a fridge about 150 W while its compressor runs. Five fans, six LED lights and a TV come to roughly 500 W.</p>\n<h2>Match the voltage to your inverter</h2>\n<ul><li>12V inverter (up to about 900 VA): <a href=\"{rel}batteries/redtuff-rt-1344kwh-inverter-battery/\">12.8V 1.344 kWh</a></li><li>24V inverter (about 1.5 to 2 kVA): 25.6V 2.688 kWh, <a href=\"{rel}batteries/redtuff-rt-2688kwh-inverter-battery/\">Redtuff</a> or <a href=\"{rel}batteries/livgreen-lg-2688kwh-inverter-battery/\">Livgreen</a></li><li>48V inverter or solar hybrid (about 3 to 5 kVA): 48V 5.040 kWh, <a href=\"{rel}batteries/redtuff-rt-5040kwh-inverter-battery/\">Redtuff</a> or <a href=\"{rel}batteries/livgreen-lg-5040kwh-inverter-battery/\">Livgreen</a></li></ul>\n<div class=\"box\"><b>Lithium vs tubular:</b> no acid, no water top-up, no fumes indoors, faster recharge after the power returns, and a 60-month warranty.</div>",
+  "faq": [
+   [
+    "Can I use a lithium battery with my old inverter?",
+    "Yes, if the system voltage matches (12V, 24V or 48V). Set the inverter to a lithium or suitable charging profile; we can help on call."
+   ],
+   [
+    "How long does a lithium inverter battery last?",
+    "LiFePO4 is built for thousands of cycles, and our inverter batteries carry a 60-month warranty."
+   ]
+  ]
+ }
+]

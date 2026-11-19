@@ -1,0 +1,17 @@
+{
+ "rt-5376": "redtuff-rt-5376kwh-e-rickshaw-battery",
+ "lg-5112": "livgreen-51-2v-105ah-e-rickshaw-battery",
+ "lg-96105": "livgreen-96v-105ah-lithium-battery",
+ "lg-4830": "livgreen-lg-4830-48v-30ah-e-scooter-battery",
+ "lg-6030": "livgreen-lg-6030-60v-30ah-e-scooter-battery",
+ "lg-6032": "livgreen-lg-6032-60v-32ah-e-scooter-battery",
+ "lg-7230": "livgreen-lg-7230-72v-30ah-e-scooter-battery",
+ "rt-6030": "redtuff-rt-6030-60v-30ah-e-scooter-battery",
+ "rles-6030": "revolt-rles-60v-30ah-lithium-battery",
+ "rles-4830": "revolt-rles-48v-30ah-lithium-battery",
+ "rt-1344": "redtuff-rt-1344kwh-inverter-battery",
+ "rt-2688": "redtuff-rt-2688kwh-inverter-battery",
+ "rt-5040": "redtuff-rt-5040kwh-inverter-battery",
+ "lg-2688": "livgreen-lg-2688kwh-inverter-battery",
+ "lg-5040": "livgreen-lg-5040kwh-inverter-battery"
+}
