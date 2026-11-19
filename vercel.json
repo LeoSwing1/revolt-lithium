@@ -1,6 +1,6 @@
 {
   "outputDirectory": ".",
-  "framework": null,
+  "framework": "other",
   "rewrites": [
     { "source": "/(.*)", "destination": "/$1" }
   ]

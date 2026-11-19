@@ -1,0 +1,18 @@
+# Source files for build (already compiled)
+src/
+scripts/partials.ts
+scripts/build-pages.ts
+
+# Development dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test.*
+
+# Git files
+.git/
+.gitignore
