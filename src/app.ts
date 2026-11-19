@@ -23,7 +23,8 @@ const cut = (id: string) => NO_ALPHA.has(id) ? `img/p/${id}-1200.webp` : `img/a/
 const logo = (b: string, tone: 'dark' | 'light') => `img/brand/${b.toLowerCase()}-logo-${tone}.webp`;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-initCommon();
+// Force initCommon to execute (prevents tree-shaking with esbuild --splitting)
+import('./common').then(m => m.initCommon());
 
 /* ================= hero stage ================= */
 {
@@ -360,3 +361,62 @@ qf.addEventListener('submit', async e => {
 prefillFromQuery(id => setQuoteModel(id));
 route();
 initImageFX('.step .ph');
+
+/* ================= language switcher ================= */
+let locales: Record<string, Record<string, string>> | null = null;
+
+async function loadLocales(): Promise<Record<string, Record<string, string>>> {
+  if (locales) return locales;
+  const res = await fetch('js/locales.js');
+  const text = await res.text();
+  locales = JSON.parse(text);
+  (<any>window).locales = locales;
+  return locales;
+}
+
+function updateContent(locale: Record<string, string>): void {
+  document.querySelectorAll('[data-i18n]').forEach(elem => {
+    const key = elem.getAttribute('data-i18n');
+    if (key && locale[key]) {
+      elem.textContent = locale[key];
+    }
+  });
+}
+
+function initLangSwitcher(): void {
+  const langButtons = document.querySelectorAll('.lang-btn');
+  if (!langButtons.length) return;
+
+  loadLocales().then(() => {
+    if (!locales) return;
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', (e: MouseEvent) => {
+        e.preventDefault();
+        const langBtn = btn as HTMLElement;
+        const lang = langBtn.dataset.lang;
+        if (!lang || !locales![lang]) return;
+
+        // Update active state
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        langBtn.classList.add('active');
+
+        // Update language display in nav
+        const currentLang = document.getElementById('current-lang');
+        if (currentLang) {
+          const nameSpan = langBtn.querySelector('.lang-name');
+          currentLang.textContent = nameSpan?.textContent?.split('(')[0].trim() || '';
+        }
+
+        // Set document language
+        document.documentElement.lang = lang;
+
+        // Update content
+        updateContent(locales![lang]);
+      });
+    });
+  });
+}
+
+// Initialize language switcher
+initLangSwitcher();

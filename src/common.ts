@@ -126,7 +126,7 @@ function initHeader() {
   btns.forEach(b => {
     const dd = $('#' + b.getAttribute('aria-controls'))!; const li = b.parentElement!; let t = 0;
     const open = () => { clearTimeout(t); close(b); b.setAttribute('aria-expanded', 'true'); dd.classList.add('open'); };
-    const shut = () => { t = window.setTimeout(() => { b.setAttribute('aria-expanded', 'false'); dd.classList.remove('open'); }, 140); };
+    const shut = () => { clearTimeout(t); t = window.setTimeout(() => { b.setAttribute('aria-expanded', 'false'); dd.classList.remove('open'); }, 140); };
     b.addEventListener('click', () => b.getAttribute('aria-expanded') === 'true' ? (b.setAttribute('aria-expanded', 'false'), dd.classList.remove('open')) : open());
     if (matchMedia('(hover: hover)').matches) { li.addEventListener('pointerenter', open); li.addEventListener('pointerleave', shut); }
     li.addEventListener('focusout', e => { if (!li.contains(e.relatedTarget as Node)) shut(); });

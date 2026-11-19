@@ -1,1 +1,1 @@
-import{a as t,f as i,g as o}from"./chunks/chunk-JBMZOD3W.js";i();o(".fx");var m=document.body.dataset.product;m&&t("view_item",{item_id:m,source:"product_page"});
+import{a as o}from"./chunks/chunk-ZL4YXEQR.js";import{a as t,g as i}from"./chunks/chunk-FN73D3XF.js";i();o(".fx");var m=document.body.dataset.product;m&&t("view_item",{item_id:m,source:"product_page"});

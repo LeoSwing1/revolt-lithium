@@ -6,12 +6,10 @@ const ic = {
   phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>',
   wa: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.8-.5zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>',
   mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
-  fb: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8a0 0 0 0 1 0 0z"/></svg>',
-  ig: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
-  yt: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12a31 31 0 0 0 .4 3.8 3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.4-2.5.4-3.8s-.1-2.5-.4-3.8zM10 15V9l5.2 3z"/></svg>',
-  li: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9h4v12H4zM6 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4 6h4v1.7c.6-1 1.9-2 3.9-2 4.1 0 4.1 2.7 4.1 6.2V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.2 1.4-2.2 2.9V21h-4z"/></svg>'
+  lang: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 21c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z"/><path d="M12 3a9 9 0 0 0 0 18" stroke-linecap="round"/></svg>'
 };
-export const icons = ic;
+
+const langBtns = '<button type="button" class="lang-btn" data-lang="en" style="width:100%;text-align:left;background:none;border:0;padding:.5rem .75rem;cursor:pointer;font-weight:600;border-radius:6px"><span class="lang-flag">🌍</span> <span class="lang-name">English (EN)</span></button><button type="button" class="lang-btn" data-lang="hi" style="width:100%;text-align:left;background:none;border:0;padding:.5rem .75rem;cursor:pointer;font-weight:600;border-radius:6px"><span class="lang-flag">🇮🇳</span> <span class="lang-name">हिन्दी (HI)</span></button><button type="button" class="lang-btn" data-lang="bn" style="width:100%;text-align:left;background:none;border:0;padding:.5rem .75rem;cursor:pointer;font-weight:600;border-radius:6px"><span class="lang-flag">🇧🇩</span> <span class="lang-name">বাংলা (BN)</span></button><button type="button" class="lang-btn" data-lang="ta" style="width:100%;text-align:left;background:none;border:0;padding:.5rem .75rem;cursor:pointer;font-weight:600;border-radius:6px"><span class="lang-flag">🇮🇳</span> <span class="lang-name">தமிழ் (TA)</span></button>';
 
 const groups = (c: Ctx) => ([
   ['E-Rickshaw', 'rickshaw', 'e-rickshaw-battery/'], ['E-2 Wheeler', 'twowheeler', 'e-scooter-battery/'], ['Inverter & Solar', 'inverter', 'lithium-inverter-battery/']
@@ -25,23 +23,25 @@ export function header(c: Ctx): string {
   <div class="container">
     <a class="logo" href="${c.home ? '#top' : r}" aria-label="REVOLT Lithium Energy Solutions, home"><span class="logo-text">REVOLT</span></a>
     <nav aria-label="Main"><ul class="nav">
-      <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-brands">Our Brands ${ic.chev}</button>
+      <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-brands" data-i18n="brands">Our Brands ${ic.chev}</button>
         <div class="dd" id="dd-brands">
           <a href="${r}livgreen/"><img src="${r}img/brand/livgreen-logo-dark.webp" alt="" width="706" height="465"><span><b>Livgreen</b><small>Advanced lithium battery technology</small></span></a>
           <a href="${r}redtuff/"><img src="${r}img/brand/redtuff-logo-dark.webp" alt="" width="785" height="352"><span><b>Redtuff</b><small>Always on. Always win.</small></span></a>
           <a href="${a(c, '#brands')}"><img src="${r}img/brand/revolt-logo-dark.webp" alt="" width="888" height="304"><span><b>Revolt RLES</b><small>Our own series with Bluetooth BMS</small></span></a>
         </div></li>
-      <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-batteries">Batteries ${ic.chev}</button>
+      <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-batteries" data-i18n="batteries">Batteries ${ic.chev}</button>
         <div class="dd mega" id="dd-batteries">${mega}<div class="feature"><div><b>Not sure which battery?</b><p style="margin-top:.5rem;font-size:.9rem">Compare range, backup and 3-year cost before you buy.</p></div><a class="btn btn--lime btn--sm" href="${a(c, '#calculators')}">Open calculators</a></div></div></li>
-      <li><a class="nav-a" href="${a(c, '#inverter')}">Inverter &amp; Solar</a></li>
-      <li><a class="nav-a" href="${a(c, '#specs')}">Specifications</a></li>
-      <li><a class="nav-a" href="${a(c, '#quality')}">Quality</a></li>
-      <li><a class="nav-a" href="${a(c, '#calculators')}">Calculators</a></li>
-      <li><a class="nav-a" href="${a(c, '#dealers')}">Dealers</a></li>
+      <li><a class="nav-a" href="${a(c, '#inverter')}" data-i18n="inverter">Inverter & Solar</a></li>
+      <li><a class="nav-a" href="${a(c, '#specs')}" data-i18n="specs">Specifications</a></li>
+      <li><a class="nav-a" href="${a(c, '#quality')}" data-i18n="quality">Quality</a></li>
+      <li><a class="nav-a" href="${a(c, '#calculators')}" data-i18n="calc">Calculators</a></li>
+      <li><a class="nav-a" href="${a(c, '#dealers')}" data-i18n="dealers">Dealers</a></li>
+      <li><button class="nav-a" type="button" aria-expanded="false" aria-controls="dd-lang">${ic.lang} <span id="current-lang" data-i18n="lang_label">Language</span> ${ic.chev}</button>
+        <div class="dd" id="dd-lang" style="min-width:140px;">${langBtns}</div></li>
     </ul></nav>
     <div class="hdr-cta">
-      <a class="hdr-phone" href="tel:+919756073477" data-track="call">Call us<b>97560 73477</b></a>
-      <a class="btn btn--lime" href="${a(c, '#quote')}" data-track="cta_quote">Get a Quotation</a>
+      <a class="hdr-phone" href="tel:+919756073477" data-track="call"><span data-i18n="call">Call us</span><b>97560 73477</b></a>
+      <a class="btn btn--lime" href="${a(c, '#quote')}" data-track="cta_quote" data-i18n="quote">Get a Quotation</a>
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
     </div>
   </div>
@@ -49,18 +49,19 @@ export function header(c: Ctx): string {
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="drawer-top"><span class="logo-text">REVOLT</span><button class="drawer-x" type="button" aria-label="Close menu">×</button></div>
   <nav aria-label="Mobile">
-    <details><summary>Batteries</summary><div class="sub">${g.map(x => `<a href="${r}${x.path}">${x.name}<span>${x.ids.length} models</span></a>`).join('')}<a href="${a(c, '#batteries')}">Product showcase<span>3D view</span></a></div></details>
-    <details><summary>Our Brands</summary><div class="sub"><a href="${r}livgreen/">Livgreen<span>Advanced technology</span></a><a href="${r}redtuff/">Redtuff<span>Always on</span></a><a href="${a(c, '#brands')}">Revolt RLES<span>Bluetooth BMS</span></a></div></details>
-    <a class="d-link" href="${a(c, '#inverter')}">Inverter &amp; Solar</a>
-    <a class="d-link" href="${a(c, '#specs')}">Specifications</a>
-    <a class="d-link" href="${a(c, '#quality')}">Quality</a>
-    <a class="d-link" href="${a(c, '#calculators')}">Calculators</a>
-    <a class="d-link" href="${a(c, '#dealers')}">Dealers</a>
+    <details><summary data-i18n="batteries">Batteries</summary><div class="sub">${g.map(x => `<a href="${r}${x.path}">${x.name}<span>${x.ids.length} models</span></a>`).join('')}<a href="${a(c, '#batteries')}">Product showcase<span>3D view</span></a></div></details>
+    <details><summary data-i18n="brands">Our Brands</summary><div class="sub"><a href="${r}livgreen/">Livgreen<span>Advanced technology</span></a><a href="${r}redtuff/">Redtuff<span>Always on</span></a><a href="${a(c, '#brands')}">Revolt RLES<span>Bluetooth BMS</span></a></div></details>
+    <a class="d-link" href="${a(c, '#inverter')}" data-i18n="inverter">Inverter & Solar</a>
+    <a class="d-link" href="${a(c, '#specs')}" data-i18n="specs">Specifications</a>
+    <a class="d-link" href="${a(c, '#quality')}" data-i18n="quality">Quality</a>
+    <a class="d-link" href="${a(c, '#calculators')}" data-i18n="calc">Calculators</a>
+    <a class="d-link" href="${a(c, '#dealers')}" data-i18n="dealers">Dealers</a>
     <a class="d-link" href="${r}guides/">Buying guides</a>
+    <a class="d-link" href="${a(c, '#quote')}" data-i18n="quote">Get a Quotation</a>
   </nav>
   <div class="drawer-foot">
-    <a class="btn btn--lime btn--block" href="${a(c, '#quote')}" data-track="cta_quote">Get a Quotation</a>
-    <div class="phones"><a href="tel:+919756073477" data-track="call"><small>Sales</small>97560 73477</a><a href="tel:+919990138500" data-track="call"><small>Dealers</small>99901 38500</a></div>
+    <a class="btn btn--lime btn--block" href="${a(c, '#quote')}" data-track="cta_quote" data-i18n="quote">Get a Quotation</a>
+    <div class="phones"><a href="tel:+919756073477" data-track="call"><small data-i18n="call">Sales</small>97560 73477</a><a href="tel:+919990138500" data-track="call"><small>Dealers</small>99901 38500</a></div>
   </div>
 </div>`;
 }
