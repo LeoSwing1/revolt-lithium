@@ -1,6 +1,9 @@
 {
+  "buildCommand": "npm run build",
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
+  "cleanUrls": false,
+  "headers": [
+    { "source": "/js/chunks/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/(fonts|img)/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
   ]
 }
